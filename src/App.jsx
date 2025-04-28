@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Layout from './pages/Layout'
-import Home from './pages/Site/Home';
+import Home from './pages/Site/home/Home';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import ProtectedRoute from './components/ProtectedRoute';
 import { AuthProvider } from './context/AuthContext';

@@ -1,108 +1,125 @@
+/* استایل کلی کانتینر کاروسل */
 .product-carousel-container {
-    background-color: #003366; /* آبی تیره پس زمینه */
-    border-radius: 8px;
-    padding: 20px;
-    color: white;
-    text-align: center;
-    position: relative; /* برای موقعیت دهی دکمه های پیمایش */
-  }
-  
-  .carousel-title {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .carousel-cards-container {
-    display: flex;
-    overflow-x: hidden; /* مخفی کردن کارت های خارج از محدوده */
-    gap: 20px; /* فاصله بین کارت ها */
-    padding: 0 20px; /* padding برای ایجاد فضای خالی اطراف کارت ها و دکمه ها */
-    position: relative; /* برای موقعیت دهی دکمه های پیمایش در داخل container */
-    justify-content: center; /* برای مرکز قرار دادن کارت ها */
-  }
-  
-  .carousel-button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    position: absolute; /* موقعیت دهی دکمه ها */
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
-  }
-  
-  .carousel-button:hover {
-    opacity: 1;
-  }
-  
-  .prev-button {
-    left: 0px; /* موقعیت دکمه قبلی */
-  }
-  
-  .next-button {
-    right: 0px; /* موقعیت دکمه بعدی */
-  }
-  
-  
-  .product-card {
-    background-color: white;
-    color: black;
-    border-radius: 8px;
-    padding: 15px;
-    text-align: left;
-    width: 250px; /* عرض کارت ها */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    flex: 0 0 auto; /* جلوگیری از کشیده شدن کارت ها */
-  }
-  
-  .product-card.active {
-    border: 2px solid #007bff; /* حاشیه آبی برای کارت فعال */
-    transform: scale(1.05); /* کمی بزرگتر کردن کارت فعال */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* سایه برای کارت فعال */
-  }
-  
-  
-  .product-image {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 10px;
-  }
-  
-  .product-name {
-    font-size: 18px;
-    margin-bottom: 5px;
-  }
-  
-  .product-price {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 5px;
-  }
-  
-  .discount-badge {
-    background-color: #dc3545; /* قرمز رنگ تخفیف */
-    color: white;
-    padding: 5px 8px;
-    border-radius: 5px;
-    font-size: 14px;
-  }
-  
-  .shop-now-button {
-    background-color: #007bff; /* آبی روشن دکمه */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .shop-now-button:hover {
-    background-color: #0056b3; /* آبی تیره تر هاور */
-  }
+  background-image: url(src/assets/img/home/Salessection.svg); /* تصویر پس‌زمینه جدید */
+  background-size: cover; /* پوشش کامل پس‌زمینه */
+  border-radius: 8px; /* گوشه‌های گرد */
+  padding: 30px; /* فاصله داخلی بیشتر */
+  color: white; /* رنگ متن سفید */
+  text-align: center; /* ترازبندی متن در مرکز */
+  overflow-x: scroll; /* مخفی کردن اسکرول افقی اضافی */
+  position: relative; /* موقعیت‌دهی نسبی برای دکمه‌های پیمایش */
+/*  cursor: grab;*/
+}
+.carousel-title {
+  width: 18%; /* عرض عنوان کمتر */
+  margin-top: 50px; /* فاصله بالا از عنوان */
+  float: left; /* شناور شدن به چپ */
+}
+
+/* استایل کانتینر کارت‌ها */
+.carousel-cards-container {
+  width: 75%; /* عرض کانتینر کارت‌ها بیشتر */
+  left: 100px; /* موقعیت دهی از چپ */
+  display: flex; /* استفاده از فلکس باکس */
+  overflow-x: visible ; /* مخفی کردن کارت‌های خارج از محدوده */
+  gap: 0px; /* حذف فاصله بین کارت‌ها */
+  position: relative; /* موقعیت‌دهی نسبی برای دکمه‌های پیمایش داخل کانتینر */
+  justify-content:left; /* مرکز قرار دادن کارت‌ها */
+}
+
+/* استایل دکمه‌های کاروسل */
+.carousel-button {
+  background: none; /* حذف پس‌زمینه دکمه */
+  border: none; /* حذف حاشیه دکمه */
+  padding: 0px; /* حذف فاصله داخلی دکمه */
+  margin-inline: 5px; /* فاصله جانبی دکمه‌ها */
+  position: relative; /* موقعیت‌دهی نسبی برای دکمه‌ها */
+  float: left; /* شناور شدن به چپ */
+}
+
+.circle-arrow {
+  transition: all 0.3s ease; /* انیمیشن تغییر اندازه */
+  width: 40px; /* عرض اولیه فلش */
+}
+
+.circle-arrow:hover {
+  width: 50px; /* افزایش عرض فلش در حالت hover */
+  height: 50px; /* افزایش ارتفاع فلش در حالت hover */
+}
+
+.prev-button {
+  margin-left: 150px; /* فاصله راست دکمه قبلی */
+  /* موقعیت دکمه بعدی در کامنت (احتمالا اشتباه تایپی و منظور دکمه قبلی بوده) */
+}
+
+.next-button {
+  margin-left: 200px; /* موقعیت دهی دکمه بعدی از چپ */
+  top: 37px; /* موقعیت دهی دکمه بعدی از بالا */
+}
+
+/* استایل کارت محصول */
+.product-card {
+  background-color: white; /* پس‌زمینه سفید کارت */
+  color: black; /* رنگ متن مشکی کارت */
+  border-radius: 5px; /* گوشه‌های گرد کارت */
+  padding: 0px; /* حذف فاصله داخلی کارت */
+  text-align: center; /* ترازبندی متن در مرکز کارت */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* سایه ملایم کارت */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* انیمیشن تغییر اندازه و سایه کارت */
+  flex: 0 0 auto; /* جلوگیری از کشیده شدن کارت‌ها */
+}
+
+.product-card.active {
+  border: 2px solid #007bff; /* حاشیه آبی برای کارت فعال */
+  transform: scale(1.05); /* بزرگتر کردن کارت فعال */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* سایه بیشتر برای کارت فعال */
+}
+
+/* استایل تصویر محصول */
+.product-image {
+  width: 100%; /* عرض 100 درصد */
+  height: 20%; /* ارتفاع 20 درصد */
+  border-radius: 8px; /* گوشه‌های گرد تصویر */
+}
+
+/* استایل نام محصول */
+.product-name {
+  font-size: 16px; /* اندازه فونت نام محصول */
+  margin-bottom: 5px; /* فاصله پایین نام محصول */
+  height: 40px;
+}
+
+/* استایل قیمت محصول */
+.product-price {
+  font-size: 16px; /* اندازه فونت قیمت محصول */
+  color: #666; /* رنگ خاکستری قیمت محصول */
+  margin-bottom: 5px; /* فاصله پایین قیمت محصول */
+}
+
+/* استایل نشان تخفیف */
+.discount-badge {
+  background-color: #dc3545; /* رنگ قرمز نشان تخفیف */
+  color: white; /* رنگ متن سفید نشان تخفیف */
+  padding: 5px 8px; /* فاصله داخلی نشان تخفیف */
+  border-radius: 5px; /* گوشه‌های گرد نشان تخفیف */
+  font-size: 14px; /* اندازه فونت نشان تخفیف */
+}
+
+/* استایل دکمه Shop Now */
+.shop-now-button {
+  width: 50%;
+  height: 45px;
+  background-color: #007bff; /* آبی روشن پس‌زمینه دکمه */
+  color: white; /* رنگ متن سفید دکمه */
+  border: none; /* حذف حاشیه دکمه */
+  margin-top: 40px;
+  padding: 10px 20px; /* فاصله داخلی دکمه */
+  border-radius: 5px; /* گوشه‌های گرد دکمه */
+  cursor: pointer; /* نشانگر موس به شکل دست */
+  transition: background-color 0.3s ease; /* انیمیشن تغییر رنگ پس‌زمینه */
+  position: relative; /* موقعیت‌دهی نسبی */
+}
+
+.shop-now-button:hover {
+  background-color: #0056b3; /* آبی تیره تر در حالت hover */
+}

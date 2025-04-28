@@ -1,0 +1,12 @@
+.card-NewProoduct{
+    transition: transform 0.3s ease;
+    width: 280px;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.04),    /* سایه اول: قرمز، کمی شفاف */
+    -1px -1px 10px 1px rgba(0, 0, 0, 0.04)   /* سایه دوم: آبی، کمی شفاف، جابجایی به سمت بالا و چپ */
+}
+.card-NewProoduct:hover{
+    color: blue;
+    transform: scale(1.05);
+    box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.05) ,
+    -1px -1px 20px 1px rgba(0, 0, 0, 0.05) ;
+}
