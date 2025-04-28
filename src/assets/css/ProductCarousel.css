@@ -1,0 +1,108 @@
+.product-carousel-container {
+    background-color: #003366; /* آبی تیره پس زمینه */
+    border-radius: 8px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    position: relative; /* برای موقعیت دهی دکمه های پیمایش */
+  }
+  
+  .carousel-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .carousel-cards-container {
+    display: flex;
+    overflow-x: hidden; /* مخفی کردن کارت های خارج از محدوده */
+    gap: 20px; /* فاصله بین کارت ها */
+    padding: 0 20px; /* padding برای ایجاد فضای خالی اطراف کارت ها و دکمه ها */
+    position: relative; /* برای موقعیت دهی دکمه های پیمایش در داخل container */
+    justify-content: center; /* برای مرکز قرار دادن کارت ها */
+  }
+  
+  .carousel-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute; /* موقعیت دهی دکمه ها */
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+  
+  .carousel-button:hover {
+    opacity: 1;
+  }
+  
+  .prev-button {
+    left: 0px; /* موقعیت دکمه قبلی */
+  }
+  
+  .next-button {
+    right: 0px; /* موقعیت دکمه بعدی */
+  }
+  
+  
+  .product-card {
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: left;
+    width: 250px; /* عرض کارت ها */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 0 0 auto; /* جلوگیری از کشیده شدن کارت ها */
+  }
+  
+  .product-card.active {
+    border: 2px solid #007bff; /* حاشیه آبی برای کارت فعال */
+    transform: scale(1.05); /* کمی بزرگتر کردن کارت فعال */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* سایه برای کارت فعال */
+  }
+  
+  
+  .product-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .product-name {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .product-price {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 5px;
+  }
+  
+  .discount-badge {
+    background-color: #dc3545; /* قرمز رنگ تخفیف */
+    color: white;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .shop-now-button {
+    background-color: #007bff; /* آبی روشن دکمه */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .shop-now-button:hover {
+    background-color: #0056b3; /* آبی تیره تر هاور */
+  }

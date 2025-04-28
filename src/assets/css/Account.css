@@ -1,0 +1,187 @@
+.list{
+    background-color: #F6F6F6;
+    width: 30%;
+    padding-left: 20px;
+    float: left;
+
+}
+.quick-links-head{
+    padding-left: 0%;
+}
+.nav-item{
+    padding-left: 0%;
+    list-style-type: none;
+    padding: 15px;   
+}
+.img-icon{
+    float: left; 
+    margin-right: 15px;
+    margin-top: 2px;   
+}
+.form{
+    width: 90%;
+
+}
+.form-control{
+    height: 65px;
+}
+
+.iconform{
+    float: left;
+    top: 46px;
+    left: 10px;
+    position: relative;
+    height: 27px
+}
+.label-person{
+    color: #717171;
+}
+.pay-input{
+    width: 530px;
+    height: 45px;
+
+    box-shadow: none;
+    border: 1px #B4B4B4 solid;
+    border-radius: 10px 
+}
+.pay-input:focus{
+    outline: none;
+    border: 2px #0C68F4 solid;
+    color: #428AF6;
+}
+.pay-bottom{
+    background-color: inherit;
+    box-shadow: none;
+    border:none;
+    position: relative;
+    right: 40px;
+    top: -2px;
+}
+.con-payment {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .category-list {
+    width: 200px;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+  }
+  
+  .category-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .category-list li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee; 
+  }
+  
+  .category-list li.selected {
+    font-weight: bold;
+    background-color: #f0f0f0;
+  }
+  
+  .item-list {
+    flex: 1; 
+    overflow-x: auto;
+    border-radius: 10px;
+  }
+  
+  .item-list table {
+    width: 100%;
+  }
+  
+  .item-list th,
+  .item-list td {
+    height: 60px;
+    background-color: #F9F9F9;
+    text-align: center; 
+  }
+  
+  .buttons button{
+    width: 160px;
+    margin-right: 10px;
+    margin-top: 40px;
+    height: 45px;
+    border-radius: 10px;
+    color: white;
+    border:none ;
+    margin-bottom: 50px;
+  }
+  .tab-order li{
+padding-bottom: 0%;
+  }
+
+  .order-list-container {
+    display: flex; 
+    flex-direction: column; 
+  }
+  
+  .tabs {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .tabs ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; 
+  }
+  
+  .tabs li {
+    margin-right: 20px;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid transparent; 
+  }
+  
+  .tabs li.active {
+  
+    border-bottom: 2px solid #007bff; 
+  }
+  
+  .order-list {
+    padding: 20px;
+  }
+  
+  .order-list table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #F6F6F6;
+    border-radius: 20px;
+  }
+  
+  .order-list th,
+  .order-list td {
+    padding: 20px;
+    text-align:center;
+  }
+  .product-list-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around; /* برای توزیع کارت ها به صورت مساوی */
+  }
+  
+  .product-card {
+    width: 300px; /* عرض کارت */
+    margin: 10px; /* فاصله بین کارت ها */
+    border: 1px solid #ccc; /* حاشیه کارت */
+    padding: 10px; /* فاصله داخلی کارت */
+  }
+  
+  .product-card img {
+    width: 100%; /* عرض تصویر */
+    height: auto; /* ارتفاع تصویر */
+  }
+  
+  .product-buttons {
+    display: flex;
+    justify-content: space-around; /* توزیع دکمه ها به صورت مساوی */
+  }
+

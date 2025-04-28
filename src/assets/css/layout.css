@@ -1,0 +1,352 @@
+.mobile-only {
+    display: none;
+}
+
+.navbar-expand-lg {
+    border-bottom: 1px solid #0d6af5b3;
+}
+
+.hide-on-mobile {
+    display: block;
+}
+
+.nav-item {
+    padding-inline: 35px;
+}
+
+.mobile-text1 {
+    border: none;
+    background-color: inherit;
+}
+
+@media (min-width: 768px) {
+    .mobile-text {
+        border: none;
+        background-color: inherit;
+    }
+}
+
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .mobile-search {
+        margin-top: 1rem;
+        margin-bottom: 45px;
+    }
+
+    .mobile-text {
+        text-align: center;
+        flex-grow: 1;
+        display: none;
+    }
+}
+/* Modal Styles */
+#layout .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    z-index: var(--bs-modal-zindex); 
+}
+
+ .modal-content {
+    background-color: white;
+    padding-inline: 15px;
+    width: 500px; /* یا هر عرض دلخواه */
+    height: 500px;
+    max-height: 100%;
+    max-width: 60%; /* برای واکنش‌گرایی */
+ }
+/*footer*/
+
+.modern-footer {
+    background: rgb(2, 23, 54);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.modern-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(108, 92, 231, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 1;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 2;
+}
+
+.footer-title {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-bottom: 1.rem;
+    position: relative;
+    display: inline-block;
+}
+
+.text-mute {
+    color: #CBCBCB;
+
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    color: #CBCBCB;
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info i {
+    color: #6c5ce7;
+    width: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.social-links1 {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+
+.social-icon {
+    width: 37px;
+    height: 24px;
+    border-radius: 10px;
+    background: inherit;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    color: #6c5ce7;
+    box-shadow: 0 5px 15px rgba(108, 92, 231, 0.2);
+}
+
+.quick-links {
+    margin-left: -17px;
+    display: grid;
+    gap: 0.6rem;
+    padding: 0;
+    list-style: none;
+
+}
+
+.quick-links-head a {
+    color: #000000;
+    transition: all 0.2s ease;
+    font-size: 1.1rem;
+
+}
+
+.quick-links-head a:hover {
+    color: #0C68F4;
+    border-bottom: solid 1px #0c69f496;
+
+
+}
+
+.quick-links a {
+    color: #CBCBCB;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.quick-links a:hover {
+    color: #0c69f496;
+    transform: translateX(5px);
+}
+
+.quick-links a::before {
+    content: '→';
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.quick-links a:hover::before {
+    opacity: 1;
+}
+
+.newsletter-input {
+    background-color: inherit;
+    border: 1px solid #ffffff;
+    padding: 0.8rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+.btn-subscribe {
+    background: linear-gradient(45deg, #0c69f496, #a363d9);
+    border: none;
+    box-shadow: 0 2px 10px rgba(108, 92, 231, 0.2);
+    padding: 0.8rem 2rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-subscribe:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(108, 92, 231, 0.3);
+}
+
+.footer-bottom {
+
+    background: #021736;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #6c757d;
+}
+
+.footer-bottom a {
+    color: #6c5ce7;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .quick-links {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form-control {
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+/*carosel*/
+
+.card-carousel {
+    display: flex; /* کارت ها را کنار هم بچینید */
+    overflow-x: auto; /* اسکرول افقی در صورت لزوم */
+    padding-bottom: 20px; /* فضای پایین برای اسکرول */
+}
+
+.card-carousel::-webkit-scrollbar { /* برای حذف اسکرول بار در مرورگرهای Webkit (اختیاری) */
+    display: none;
+}
+
+.card-carousel {
+    -ms-overflow-style: none; /* برای حذف اسکرول بار در IE و Edge (اختیاری) */
+    scrollbar-width: none; /* برای حذف اسکرول بار در Firefox (اختیاری) */
+}
+
+
+.product-card {
+    width: 250px; /* عرض کارت محصول */
+    margin-right: 15px; /* فاصله بین کارت ها */
+    border: none; /* حذف بوردر کارت */
+    border-radius: 10px; /* گوشه های گرد */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* سایه برای برجسته شدن */
+    flex: 0 0 auto; /* برای جلوگیری از کشیدگی کارت ها و حفظ عرض */
+}
+
+.product-card:last-child { /* حذف margin-right از آخرین کارت */
+    margin-right: 0;
+}
+
+.product-card .card-img-top {
+    height: 200px; /* ارتفاع تصویر کارت */
+    object-fit: cover; /* برای پوشش کامل فضا توسط تصویر */
+    border-top-left-radius: 10px; /* گوشه های گرد برای تصویر */
+    border-top-right-radius: 10px;
+}
+
+.product-card .card-body {
+    padding: 15px;
+    text-align: center; /* متن در مرکز کارت */
+}
+
+.product-card .card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333; /* رنگ عنوان */
+    margin-bottom: 0.5rem;
+}
+
+.product-card .card-text {
+    font-size: 0.9rem;
+    color: #666; /* رنگ توضیحات */
+    margin-bottom: 1rem;
+}
+
+.product-card .price {
+    font-size: 1rem;
+    color: #F45E0C; /* رنگ قیمت */
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.product-card .btn-primary {
+    background-color: #0C68F4; /* رنگ دکمه */
+    border-color: #0C68F4;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    padding: 8px 20px;
+}
+
+.product-card .btn-primary:hover {
+    background-color: #0850C2; /* رنگ دکمه در حالت hover */
+    border-color: #0850C2;
+}
+
+/* استایل کلی کروسل (اختیاری - برای پس زمینه آبی و غیره) */
+#homeCarousel {
+    background-color: #f0f0f0; /* رنگ پس زمینه کلی کروسل - قابل تغییر */
+    padding: 20px 0; /* فاصله بالا و پایین */
+    border-radius: 15px; /* گوشه های گرد برای کل کروسل */
+    overflow: hidden; /* برای مخفی کردن اسکرول افقی احتمالی کروسل در برخی مرورگرها */
+}
