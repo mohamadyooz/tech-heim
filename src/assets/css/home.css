@@ -1,19 +1,79 @@
 .card-NewProoduct{
-    transition: transform 0.3s ease;
-    width: 280px;
+    transition: all 0.3s ease;
+    max-width: 280px;
     box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.04),    /* سایه اول: قرمز، کمی شفاف */
     -1px -1px 10px 1px rgba(0, 0, 0, 0.04)   /* سایه دوم: آبی، کمی شفاف، جابجایی به سمت بالا و چپ */
 }
 .card-NewProoduct:hover{
-    color: blue;
+    color: #0554ca;
     transform: scale(1.05);
     box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.05) ,
     -1px -1px 20px 1px rgba(0, 0, 0, 0.05) ;
 }
-.cnvvn{
-    width: 120px;
-    height: 100px;
-
-    
-    
+.card-title-product{
+    height: 50px;
 }
+.button-image{
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: none;
+    height: 40px;
+    width: 140px;
+    background-color: #0C68F4;
+    border-radius: 5px;
+    position:relative;
+    float: right; 
+    bottom: 130px;
+    right: 15%;
+    color: white;
+}
+.button-image:hover{
+    transform: scale(1.05);
+    background-color: #021736 ;
+}
+.View-all{
+    background-color: inherit;
+    border: none;
+    width: 100px;
+    margin-top: 5px;
+    transition: all 0.3s ease;
+}
+.View-all:hover{
+    border-radius: 5px;
+    background-color: #F45E0C;
+    color: white;
+    transform: scale(1.05);
+
+}
+.head-row{
+    padding-bottom: 10px;
+    border-bottom: 2px solid #B4B4B4;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+.favorite-button {
+    position: absolute; /* موقعیت دهی مطلق نسبت به کارت والد */
+    top: 10px; /* فاصله از بالای کارت */
+    left: 10px; /* فاصله از سمت راست کارت */
+    background-color: white; /* پس زمینه نیمه شفاف */
+    border: none; /* بدون حاشیه */
+    border-radius: 50%; /* گرد کردن دکمه */
+    max-width: 30px; /* عرض دکمه */
+    max-height: 30px; /* ارتفاع دکمه */
+    display: flex; /* برای مرکز قرار دادن آیکون */
+    justify-content: center; /* مرکز افقی */
+    align-items: center; /* مرکز عمودی */
+    cursor: pointer; /* تغییر نشانگر موس به حالت دست */
+    z-index: 1; /* اطمینان از اینکه دکمه روی تصویر و سایر عناصر قرار می‌گیرد */
+    /* استایل های دیگر برای ظاهر دکمه در حالت hover اگر نیاز باشد */
+    float: left;
+  }
+  .error-favoritebotton{
+    color: red; /* رنگ متن */
+  font-size: 0.8rem; /* اندازه فونت */
+  position: absolute; /* موقعیت دهی مطلق نسبت به والد موقعیت‌دهی شده */
+  bottom: 5px; /* فاصله از پایین والد */
+  left: 5px; /* فاصله از سمت چپ والد */
+  right: 5px; /* فاصله از سمت راست والد (باعث می‌شود عرض div فضای بین left و right را پر کند) */
+  text-align: center; /* مرکز چین کردن متن */
+  }

@@ -1,0 +1,67 @@
+{
+    "products": [
+      {
+      "id": 1,
+      "name": "lskn.mv//lxz T55",
+      "price": "$249.99",
+      "discount": "10%",
+      "image": "src/assets/img/home/image.jpg"
+    },
+    {
+      "id": 2,
+      "name": "elkbmnd.x T55",
+      "price": "$249.99",
+      "discount": "10%",
+      "image": "src/assets/img/home/image.jpg"
+    },
+    {
+      "id": 3,
+      "name": "wep]fll,k;'lsm, T55",
+      "price": "$249.99",
+      "discount": "10%",
+      "image": "src/assets/img/home/image.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Sb.d,mdfbdb T55 uygjhhlhgk;m'lkvfn;ns,sfdsgdzf hxgjchvkjblkn;lkmbvlcxgdf",
+      "price": "$249.99",
+      "discount": "10%",
+      "image": "src/assets/img/home/image.jpg"
+    },
+      {
+        "id": 5,
+        "name": "Logitech G903 Hero",
+        "price": "$99.99",
+        "discount": "30%",
+        "image": "src/assets/img/home/image.jpg"
+      },
+      {
+        "id": 6,
+        "name": "RK ROYAL KLUDGE",
+        "price": "$54.99",
+        "discount": "25%",
+        "image": "src/assets/img/home/image.jpg"
+      },
+      {
+        "id": 7,
+        "name": "Apple Watch Series 7 ",
+        "price": "$319.99",
+        "discount": "15%",
+        "image": "src/assets/img/home/image.jpg"
+      },
+      {
+        "id": 8,
+        "name": "Apple 2022 MacBook Air",
+        "price": "$799.99",
+        "discount": "20%",
+        "image": "src/assets/img/home/image.jpg"
+      },
+      {
+        "id": 9,
+        "name": "Samsung Monitor T55",
+        "price": "$249.99",
+        "discount": "10%",
+        "image": "src/assets/img/home/image.jpg"
+      }
+    ]
+  }  

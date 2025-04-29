@@ -1,67 +1,131 @@
 {
-    "products": [
-      {
-        "id": 1,
-        "name": "Logitech G903 Hero",
-        "price": "$99.99",
-        "discount": "30%",
-        "image": "src/assets/img/home/image.jpg"
-      },
-      {
-        "id": 2,
-        "name": "RK ROYAL KLUDGE",
-        "price": "$54.99",
-        "discount": "25%",
-        "image": "src/assets/img/home/image.jpg"
-      },
-      {
-        "id": 3,
-        "name": "Apple Watch Series 7 uygjhhlhgk;m'lkvfn ;ns ,sfdsgdzf hxgjchvkjblkn;lkmbvlcxgdf",
-        "price": "$319.99",
-        "discount": "15%",
-        "image": "src/assets/img/home/image.jpg"
-      },
-      {
-        "id": 4,
-        "name": "Apple 2022 MacBook Air",
-        "price": "$799.99",
-        "discount": "20%",
-        "image": "src/assets/img/home/image.jpg"
-      },
-      {
-        "id": 5,
-        "name": "Samsung Monitor T55",
-        "price": "$249.99",
-        "discount": "10%",
-        "image": "src/assets/img/home/image.jpg"
-      },
-      {
-        "id": 6,
-        "name": "lskn.mv//lxz T55",
-        "price": "$249.99",
-        "discount": "10%",
-        "image": "src/assets/img/home/image.jpg"
-      },
-      {
-        "id": 7,
-        "name": "elkbmnd.x T55",
-        "price": "$249.99",
-        "discount": "10%",
-        "image": "src/assets/img/home/image.jpg"
-      },
-      {
-        "id": 8,
-        "name": "wep]fll,k;'lsm, T55",
-        "price": "$249.99",
-        "discount": "10%",
-        "image": "src/assets/img/home/image.jpg"
-      },
-      {
-        "id": 9,
-        "name": "Sb.d,mdfbdb T55",
-        "price": "$249.99",
-        "discount": "10%",
-        "image": "src/assets/img/home/image.jpg"
-      }
-    ]
-  }
+  "products": [
+    {
+      "id": "1",
+      "name": "Logitech G903 Hero",
+      "price": "$99.99",
+      "discount": "30%",
+      "image": "src/assets/img/home/image.jpg"
+    },
+    {
+      "id": "2",
+      "name": "RK ROYAL KLUDGE",
+      "price": "$54.99",
+      "discount": "25%",
+      "image": "src/assets/img/home/image.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Apple Watch Series 7 uygjhhlhgk;m'lkvfn ;ns ,sfdsgdzf hxgjchvkjblkn;lkmbvlcxgdf",
+      "price": "$319.99",
+      "discount": "15%",
+      "image": "src/assets/img/home/image.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Apple 2022 MacBook Air",
+      "price": "$799.99",
+      "discount": "20%",
+      "image": "src/assets/img/home/image.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Samsung Monitor T55",
+      "price": "$249.99",
+      "discount": "10%",
+      "image": "src/assets/img/home/image.jpg"
+    },
+    {
+      "id": "6",
+      "name": "lskn.mv//lxz T55",
+      "price": "$249.99",
+      "discount": "10%",
+      "image": "src/assets/img/home/image.jpg"
+    },
+    {
+      "id": "7",
+      "name": "elkbmnd.x T55",
+      "price": "$249.99",
+      "discount": "10%",
+      "image": "src/assets/img/home/image.jpg"
+    },
+    {
+      "id": "8",
+      "name": "wep]fll,k;'lsm, T55",
+      "price": "$249.99",
+      "discount": "10%",
+      "image": "src/assets/img/home/image.jpg"
+    },
+    {
+      "id": "9",
+      "name": "Sb.d,mdfbdb T55",
+      "price": "$249.99",
+      "discount": "10%",
+      "image": "src/assets/img/home/image.jpg"
+    },
+    {
+      "id": "9653",
+      "productId": "2"
+    },
+    {
+      "id": "b072",
+      "productId": "1"
+    },
+    {
+      "id": "c488",
+      "productId": "2"
+    },
+    {
+      "id": "c0ae",
+      "productId": "1"
+    },
+    {
+      "id": "4cb6",
+      "productId": "3"
+    },
+    {
+      "id": "c305",
+      "productId": 1
+    },
+    {
+      "id": "b604",
+      "productId": 2
+    },
+    {
+      "id": "78b5",
+      "productId": 2
+    },
+    {
+      "id": "1f75",
+      "productId": 1
+    },
+    {
+      "id": "6dd9",
+      "productId": 2
+    },
+    {
+      "id": "3ea7",
+      "productId": 1
+    },
+    {
+      "id": "6d03",
+      "productId": 4
+    },
+    {
+      "id": "0458",
+      "productId": 3
+    },
+    {
+      "id": "6105",
+      "productId": 3
+    },
+    {
+      "id": "968c",
+      "productId": 1
+    },
+    {
+      "id": "75a0",
+      "productId": 2
+    }
+  ]
+}
