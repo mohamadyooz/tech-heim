@@ -2,7 +2,8 @@
     transition: all 0.3s ease;
     max-width: 280px;
     box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.04),    /* سایه اول: قرمز، کمی شفاف */
-    -1px -1px 10px 1px rgba(0, 0, 0, 0.04)   /* سایه دوم: آبی، کمی شفاف، جابجایی به سمت بالا و چپ */
+    -1px -1px 10px 1px rgba(0, 0, 0, 0.04);   /* سایه دوم: آبی، کمی شفاف، جابجایی به سمت بالا و چپ */
+    overflow: hidden;
 }
 .card-NewProoduct:hover{
     color: #0554ca;
@@ -11,7 +12,7 @@
     -1px -1px 20px 1px rgba(0, 0, 0, 0.05) ;
 }
 .card-title-product{
-    height: 50px;
+    height: 30px;
 }
 .button-image{
     transition: all 0.3s ease;
@@ -77,3 +78,49 @@
   right: 5px; /* فاصله از سمت راست والد (باعث می‌شود عرض div فضای بین left و right را پر کند) */
   text-align: center; /* مرکز چین کردن متن */
   }
+  .discount-badge-home {
+    background-color: #f8394c42; /* رنگ قرمز نشان تخفیف */
+    color: rgb(255, 4, 4); /* رنگ متن سفید نشان تخفیف */
+    padding: 3px 8px; /* فاصله داخلی نشان تخفیف */
+    border-radius: 5px; /* گوشه‌های گرد نشان تخفیف */
+    font-size: 14px; /* اندازه فونت نشان تخفیف */
+    z-index: 2;
+    margin-top: 15px;
+    position:absolute;
+    right: 0px;
+    margin-right:-5px ;
+  }
+  .berand-img {
+    /* استفاده از فلکس باکس برای مرکز قرار دادن محتوای داخلی (لینک و تصویر) */
+    display: flex;
+    justify-content: center; /* مرکز افقی */
+    align-items: center; /* مرکز عمودی */
+    /* اگر Padding یا Margin برای فضای داخلی نیاز دارید اینجا اضافه کنید */
+     padding-inline: 10px; /* مثال: فضای داخلی */
+  }
+  
+  .berand-img a {
+    /* لینک تمام فضای article را پر می کند */
+    display: block; /* یا display: flex; */
+    width: 100%; /* عرض کامل article */
+    height: 100%; /* ارتفاع کامل article (که خودش به دلیل فلکس والد برابر است) */
+    text-decoration: none; /* حذف خط زیر لینک */
+    color: inherit; /* ارث بری رنگ متن از والد (اگر متنی در لینک بود) */
+    /* اگر display: flex; را برای a استفاده کردید، میتوانید محتوای داخل لینک را هم مرکز کنید */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .berand-img a img {
+      /* اطمینان از اینکه تصویر از فضای لینک بیرون نزند */
+      max-width: 100%;
+      max-height: 100%; /* یا ارتفاع دلخواه */
+      object-fit: contain; /* تصویر را بدون تغییر نسبت ابعاد فیت کند */
+  }
+  
+  /* استایل هنگام هاور (اختیاری) */
+  .berand-img a:hover {
+      opacity: 0.8; /* مثال: کمی شفافیت هنگام هاور */
+      cursor: pointer; /* اطمینان از نمایش نشانگر دست */
+  }
+  

@@ -104,7 +104,7 @@ function NewProductCard({ product }) {
             )}
         </button>
         )}
-
+             {product.discount && <span className="discount-badge-home" >{product.discount}</span>}
         {/* نمایش پیام خطا در صورت وجود */}
         {saveFavoriteError &&(
           <div className='error-favoritebotton'>خطا در ارسال به لیست مورد علاقه ها </div>
@@ -119,9 +119,9 @@ function NewProductCard({ product }) {
           <br /><br />
           <p className="card-text " style={{ color: 'initial', float: 'left' }}>{product.price}</p>
         {/* فرض بر این است که ویژگی discount نیز در داده محصول وجود دارد */}
-        {product.discount && (
-             <p className="card-text " style={{ color: 'initial', float: 'right' }}>
-                {product.discount} {/* نمایش مقدار تخفیف */}
+        {product.score && (
+             <p className="card-text " style={{ color: '#063A88', float: 'right',display:'flex'}}>
+              <img src="src\assets\img\home\icon\Star.svg" alt="" style={{marginBottom:'14px'}}/><p style={{marginLeft:'5px',float:'right'}}>{product.score} </p>{/* نمایش مقدار تخفیف */}
             </p>
           )}
         </div>

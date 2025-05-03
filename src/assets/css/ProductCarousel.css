@@ -63,10 +63,11 @@
   color: black; /* رنگ متن مشکی کارت */
   border-radius: 5px; /* گوشه‌های گرد کارت */
   padding: 0px; /* حذف فاصله داخلی کارت */
-  text-align: center; /* ترازبندی متن در مرکز کارت */
+  text-align: left; /* ترازبندی متن در مرکز کارت */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* سایه ملایم کارت */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* انیمیشن تغییر اندازه و سایه کارت */
   flex: 0 0 auto; /* جلوگیری از کشیده شدن کارت‌ها */
+  overflow:auto;
 }
 
 .product-card.active {
@@ -98,11 +99,14 @@
 
 /* استایل نشان تخفیف */
 .discount-badge {
-  background-color: #dc3545; /* رنگ قرمز نشان تخفیف */
-  color: white; /* رنگ متن سفید نشان تخفیف */
-  padding: 5px 8px; /* فاصله داخلی نشان تخفیف */
+  background-color: #f8394c42; /* رنگ قرمز نشان تخفیف */
+  color: rgb(255, 4, 4); /* رنگ متن سفید نشان تخفیف */
+  padding: 1px 8px; /* فاصله داخلی نشان تخفیف */
   border-radius: 5px; /* گوشه‌های گرد نشان تخفیف */
   font-size: 14px; /* اندازه فونت نشان تخفیف */
+  z-index: 2;
+  position:absolute;
+  margin-left: -13px;
 }
 
 /* استایل دکمه Shop Now */

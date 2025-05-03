@@ -163,20 +163,19 @@ const ProductCard = ({ product}) => {
     return (
         <div
             className={`product-card ${isHovering ? 'active' : ''}`}
-            style={{ width: '200px', height: '310px' }}
+            style={{ width: '200px',  }}
             // تغییرات از کد اولیه شما: اضافه شدن هندلرهای onMouseEnter و onMouseLeave
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
+             {product.discount && <span className="discount-badge" >{product.discount}</span>}
             <img src={product.image} alt={product.name} className="product-image"
-                style={{
-                    width: '100%'
-                }} />
-            <h3 className="product-name" ref={nameRef}>            {/* استفاده از رفرنس و نمایش نام بریده شده */}
+                style={{ width: '100%',zIndex:'1' , }}/>
+            <h3 className="product-name" ref={nameRef}>    {/* استفاده از رفرنس و نمایش نام بریده شده */}
                 {truncatedName}
             </h3>
-            <p className="product-price">{product.price}</p>
-            {product.discount && <span className="discount-badge">{product.discount}</span>}
+            <p className="product-price" style={{float:'right'}}>{product.price}</p>
+            <p className="product-price" style={{float:'left'}}><del>{product.saleprice}</del></p>
         </div>
     );
 };
