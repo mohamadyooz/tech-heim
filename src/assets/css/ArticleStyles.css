@@ -1,0 +1,139 @@
+/* ArticleStyles.css */
+
+.article-list-container {
+    padding: 20px;
+    max-width: 1200px; /* یا عرض دلخواه */
+    margin: 0 auto; /* مرکز قرار دادن لیست */
+}
+
+.article-list-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.articles-grid {
+    display: grid; /* استفاده از گرید برای چیدمان دو ستونی */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* ستون‌های واکنش‌گرا */
+    gap: 20px; /* فاصله بین کارت‌ها */
+    /* یا می توانید از فلکس باکس استفاده کنید: */
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* gap: 20px; */
+    /* justify-content: center; */ /* برای مرکز قرار دادن کارت ها در فلکس */
+}
+
+.article-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden; /* مطمئن شوید محتوا از گوشه‌های گرد بیرون نزند */
+    display: flex; /* استفاده از فلکس برای چیدمان تصویر و محتوا کنار هم */
+    flex-direction: column; /* در موبایل تصویر بالا، محتوا پایین */
+    /* در صفحه نمایش بزرگتر می توانید جهت را تغییر دهید */
+    /* @media (min-width: 768px) { */
+    /* flex-direction: row; */
+    /* } */
+}
+
+/* اگر از لینک برای کل کارت استفاده می کنید */
+/* .article-link-wrapper {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+} */
+
+.article-image-container {
+    /* کنترل اندازه و نسبت ابعاد تصویر */
+    flex-basis: 150px; /* اندازه اولیه در جهت اصلی فلکس */
+    flex-shrink: 0; /* از کوچک شدن تصویر جلوگیری کن */
+    /* @media (min-width: 768px) { */
+    /* flex-basis: 200px; */ /* اندازه بزرگتر در صفحه نمایش بزرگتر */
+    /* } */
+}
+
+.article-image {
+    width: 100%;
+    height: 100%; /* یا ارتفاع مشخص */
+    object-fit: cover; /* برش تصویر برای پر کردن فضا با حفظ نسبت ابعاد */
+    display: block; /* حذف فضای اضافی زیر تصویر */
+}
+
+.article-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* اجازه بده محتوا فضای باقی مانده را پر کند */
+    position: relative; /* برای موقعیت دهی مطلق دکمه برگزیده */
+}
+
+.article-title {
+    font-size: 1.2em;
+    margin: 0 0 10px 0;
+    color: #333;
+    line-height: 1.4; /* ارتفاع خط برای برش متن */
+    /* --- استایل های برش متن (Webkit) --- */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* ----------------------------------- */
+}
+
+.article-excerpt {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 15px;
+    /* اگر می خواهید خلاصه را هم برش دهید، استایل های بالا را اینجا هم اعمال کنید */
+}
+
+.article-metadata {
+    font-size: 0.8em;
+    color: #777;
+    margin-top: auto; /* هل دادن متادیتا به پایین کارت */
+    display: flex;
+    justify-content: space-between; /* توزیع فضا بین تاریخ و زمان مطالعه */
+    align-items: center;
+}
+
+.article-date,
+.article-read-time {
+    display: flex;
+    align-items: center;
+}
+
+.article-date span,
+.article-read-time span {
+    margin-right: 5px; /* فاصله بین آیکون و متن */
+}
+
+
+.feature-button {
+    position: absolute; /* موقعیت دهی مطلق */
+    top: 10px; /* فاصله از بالا */
+    right: 10px; /* فاصله از راست */
+    background: none;
+    border: none;
+    font-size: 1.5em; /* اندازه آیکون */
+    cursor: pointer;
+    padding: 0; /* حذف پدینگ پیش فرض دکمه */
+    color: #ccc; /* رنگ پیش فرض آیکون */
+}
+
+.feature-button.featured {
+    color: gold; /* رنگ آیکون وقتی برگزیده است */
+}
+
+/* استایل ها برای نمایش بهتر در صفحه نمایش کوچک */
+@media (max-width: 767px) {
+    .article-card {
+        flex-direction: column; /* در موبایل تصویر بالا، محتوا پایین */
+    }
+    .article-image-container {
+        flex-basis: auto; /* اندازه اولیه خودکار */
+        height: 180px; /* ارتفاع مشخص برای تصویر در موبایل */
+    }
+}
