@@ -2,7 +2,7 @@ import React from 'react'
 
 const ErrorMessage = () => {
   return (
-    <div><img src="src\assets\img\login\erorr-website-site.jpg" alt="" style={{height:'150px'}}/></div>
+    <div><img src="src\assets\img\login\erorr-website-site.jpg" alt="sdafdfafd" style={{height:'150px'}}/></div>
   )
 }
 
