@@ -1,126 +1,172 @@
-.card-NewProoduct{
-    transition: all 0.3s ease;
-    max-width: 280px;
-    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.04),    /* سایه اول: قرمز، کمی شفاف */
-    -1px -1px 10px 1px rgba(0, 0, 0, 0.04);   /* سایه دوم: آبی، کمی شفاف، جابجایی به سمت بالا و چپ */
-    overflow: hidden;
+
+
+.card-NewProoduct {
+  transition: all 0.3s ease;
+  max-width: 280px;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.04),
+    -1px -1px 10px 1px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
 }
-.card-NewProoduct:hover{
-    color: #0554ca;
-    transform: scale(1.05);
-    box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.05) ,
-    -1px -1px 20px 1px rgba(0, 0, 0, 0.05) ;
+
+.card-NewProoduct:hover {
+  color: #0554ca;
+  transform: scale(1.05);
+  box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.05),
+    -1px -1px 20px 1px rgba(0, 0, 0, 0.05);
 }
-.card-title-product{
-    height: 30px;
+
+.card-title-product {
+  height: 30px;
 }
-.button-image{
-    transition: all 0.3s ease;
-    border: none;
-    box-shadow: none;
-    height: 40px;
-    width: 140px;
-    background-color: #0C68F4;
-    border-radius: 5px;
-    position:relative;
-    float: right; 
-    bottom: 130px;
-    right: 15%;
-    color: white;
+
+.button-image {
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: none;
+  height: 45px;
+  width: 140px;
+  background-color: #0C68F4;
+  border-radius: 10px;
+  position: relative;
+  float: right;
+  bottom: 130px;
+  right: 15%;
+  color: white;
 }
-.button-image:hover{
-    transform: scale(1.05);
-    background-color: #021736 ;
+
+.button-image:hover {
+  transform: scale(1.05);
+  background-color: #021736;
 }
-.View-all{
-    background-color: inherit;
-    border: none;
-    width: 100px;
-    margin-top: 5px;
-    transition: all 0.3s ease;
+@media (max-width: 426px) {
+  .button-image {
+    margin: 0px;
+  }
 }
-.View-all:hover{
-    border-radius: 5px;
-    background-color: #F45E0C;
-    color: white;
-    transform: scale(1.05);
+.View-all {
+  background-color: inherit;
+  border: none;
+  width: 100px;
+  margin-top: 5px;
+  transition: all 0.3s ease;
+}
+
+.View-all:hover {
+  border-radius: 5px;
+  background-color: #F45E0C;
+  color: white;
+  transform: scale(1.05);
 
 }
-.head-row{
-    padding-bottom: 10px;
-    border-bottom: 2px solid #B4B4B4;
-    margin-bottom: 30px;
-    margin-top: 40px;
+
+.head-row {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #B4B4B4;
+  margin-bottom: 30px;
+  margin-top: 40px;
 }
+
 .favorite-button {
-    position: absolute; /* موقعیت دهی مطلق نسبت به کارت والد */
-    top: 10px; /* فاصله از بالای کارت */
-    left: 10px; /* فاصله از سمت راست کارت */
-    background-color: white; /* پس زمینه نیمه شفاف */
-    border: none; /* بدون حاشیه */
-    border-radius: 50%; /* گرد کردن دکمه */
-    max-width: 30px; /* عرض دکمه */
-    max-height: 30px; /* ارتفاع دکمه */
-    display: flex; /* برای مرکز قرار دادن آیکون */
-    justify-content: center; /* مرکز افقی */
-    align-items: center; /* مرکز عمودی */
-    cursor: pointer; /* تغییر نشانگر موس به حالت دست */
-    z-index: 1; /* اطمینان از اینکه دکمه روی تصویر و سایر عناصر قرار می‌گیرد */
-    /* استایل های دیگر برای ظاهر دکمه در حالت hover اگر نیاز باشد */
-    float: left;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  max-width: 30px;
+  max-height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+  float: left;
+}
+
+.error-favoritebotton {
+  color: red;
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+  text-align: center;
+}
+
+.discount-badge-home {
+  background-color: #f8394c42;
+  color: rgb(255, 4, 4);
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 14px;
+  z-index: 2;
+  margin-top: 15px;
+  position: absolute;
+  right: 0px;
+  margin-right: -5px;
+}
+
+.berand-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 10px;
+}
+
+.berand-img a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.berand-img a img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* استایل هنگام هاور */
+.berand-img a:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.last-home-article {
+  max-height: 200px;
+  min-height: 50px;
+  text-align: center;
+}
+@media (max-width: 426px) {
+  .last-home-article {
+    text-align: left;
+    min-height: 70px;
+
   }
-  .error-favoritebotton{
-    color: red; /* رنگ متن */
-  font-size: 0.8rem; /* اندازه فونت */
-  position: absolute; /* موقعیت دهی مطلق نسبت به والد موقعیت‌دهی شده */
-  bottom: 5px; /* فاصله از پایین والد */
-  left: 5px; /* فاصله از سمت چپ والد */
-  right: 5px; /* فاصله از سمت راست والد (باعث می‌شود عرض div فضای بین left و right را پر کند) */
-  text-align: center; /* مرکز چین کردن متن */
-  }
-  .discount-badge-home {
-    background-color: #f8394c42; /* رنگ قرمز نشان تخفیف */
-    color: rgb(255, 4, 4); /* رنگ متن سفید نشان تخفیف */
-    padding: 3px 8px; /* فاصله داخلی نشان تخفیف */
-    border-radius: 5px; /* گوشه‌های گرد نشان تخفیف */
-    font-size: 14px; /* اندازه فونت نشان تخفیف */
-    z-index: 2;
-    margin-top: 15px;
-    position:absolute;
-    right: 0px;
-    margin-right:-5px ;
-  }
-  .berand-img {
-    /* استفاده از فلکس باکس برای مرکز قرار دادن محتوای داخلی (لینک و تصویر) */
-    display: flex;
-    justify-content: center; /* مرکز افقی */
-    align-items: center; /* مرکز عمودی */
-    /* اگر Padding یا Margin برای فضای داخلی نیاز دارید اینجا اضافه کنید */
-     padding-inline: 10px; /* مثال: فضای داخلی */
-  }
-  
-  .berand-img a {
-    /* لینک تمام فضای article را پر می کند */
-    display: block; /* یا display: flex; */
-    width: 100%; /* عرض کامل article */
-    height: 100%; /* ارتفاع کامل article (که خودش به دلیل فلکس والد برابر است) */
-    text-decoration: none; /* حذف خط زیر لینک */
-    color: inherit; /* ارث بری رنگ متن از والد (اگر متنی در لینک بود) */
-    /* اگر display: flex; را برای a استفاده کردید، میتوانید محتوای داخل لینک را هم مرکز کنید */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .berand-img a img {
-      /* اطمینان از اینکه تصویر از فضای لینک بیرون نزند */
-      max-width: 100%;
-      max-height: 100%; /* یا ارتفاع دلخواه */
-      object-fit: contain; /* تصویر را بدون تغییر نسبت ابعاد فیت کند */
-  }
-  
-  /* استایل هنگام هاور (اختیاری) */
-  .berand-img a:hover {
-      opacity: 0.8; /* مثال: کمی شفافیت هنگام هاور */
-      cursor: pointer; /* اطمینان از نمایش نشانگر دست */
-  }
-  
+}
+/* کانتینر اصلی کروسل */
+.category-carousel-container {
+  overflow-x: auto;
+  display: flex;
+  padding: 10px 0;
+}
+
+/* هر آیتم داخل کروسل (والد CategoryCard) */
+.category-carousel-item {
+  flex: 0 0 auto;
+  padding: 0;
+}
+
+/* مخفی کردن نوار اسکرول در برخی مرورگرها */
+.category-carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+.category-carousel-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

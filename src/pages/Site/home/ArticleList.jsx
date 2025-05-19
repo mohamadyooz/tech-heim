@@ -53,9 +53,21 @@ const ArticleList = () => { // تعریف کامپوننت تابعی ArticleLis
             try {
                 // آدرس API مقالات شما
                 const response = await axios.get('http://localhost:3003/blog');
-                setArticles(response.data); // ذخیره داده ها در State
+                if (Array.isArray(response.data)){
+                    const sortedData = [...response.data].sort((a,b) => {
+                        const dateA = new Date(a.date);
+                        const dateB = new Date(b.date);
+                        return dateB.getTime()- dateA.getTime();
+                    });
+                    setArticles(sortedData);
+                }else{
+                    setError(new Error("Invalid data format from API"));
+                    setArticles([])
+                }
             } catch (err) {
                 setError(err); // ذخیره خطا در State
+                setArticles([]);
+                
             } finally {
                 setLoading(false); // پایان بارگذاری
             }
@@ -83,7 +95,7 @@ const ArticleList = () => { // تعریف کامپوننت تابعی ArticleLis
 
     // --- تابع مدیریت وضعیت برگزیده کردن یک مقاله ---
     const handleFeatureToggle = (articleId) => {
-         // به روز رسانی State با استفاده از تابع به روز رسانی برای دسترسی به مقدار قبلی
+        // به روز رسانی State با استفاده از تابع به روز رسانی برای دسترسی به مقدار قبلی
         setFeaturedArticleIds(prevFeatured => ({
             ...prevFeatured, // کپی کردن State قبلی
             [articleId]: !prevFeatured[articleId] // برعکس کردن وضعیت برگزیده بودن مقاله فعلی
@@ -103,13 +115,13 @@ const ArticleList = () => { // تعریف کامپوننت تابعی ArticleLis
     }
 
     // اگر لیست مقالات اصلی یا مقالات قابل مشاهده خالی است.
-    if (!articles || articles.length === 0 || visibleArticles.length === 0) {
-         return (
-             <div className="article-list-container">
-                 <h2>آخرین مقالات</h2> {/* عنوان بخش */}
-                 <p>مقاله‌ای یافت نشد.</p> {/* پیام در صورت عدم وجود مقاله */}
-             </div>
-         );
+    if (!articles || articles.length === 0) {
+        return (
+            <div className="article-list-container">
+                <h2>آخرین مقالات</h2> {/* عنوان بخش */}
+                <p>مقاله‌ای یافت نشد.</p> {/* پیام در صورت عدم وجود مقاله */}
+            </div>
+        );
     }
 
     // --- JSX اصلی برای نمایش لیست مقالات ---
@@ -117,8 +129,8 @@ const ArticleList = () => { // تعریف کامپوننت تابعی ArticleLis
         <div className="article-list-container"> {/* کانتینر اصلی */}
             <div className="articles-grid"> {/* کانتینر برای چیدمان گرید/فلکس کارت‌ها */}
                 {/* map کردن آرایه visibleArticles (محاسبه شده و بهینه شده توسط کامپایلر) */}
-                {visibleArticles.map(article => (
-                     // رندر کردن کامپوننت ArticleCard برای هر مقاله قابل مشاهده
+                {visibleArticles.map((article , index) => (
+                    // رندر کردن کامپوننت ArticleCard برای هر مقاله قابل مشاهده
                     <ArticleCard
                         key={article.id} // کلید منحصر به فرد
                         article={article} // ارسال داده های مقاله
@@ -126,6 +138,7 @@ const ArticleList = () => { // تعریف کامپوننت تابعی ArticleLis
                         isFeatured={!!featuredArticleIds[article.id]}
                         // ارسال تابع مدیریت برگزیده کردن
                         onFeatureToggle={handleFeatureToggle}
+                        displayIndex={index} // <--- ارسال index به عنوان پراپ جدید
                     />
                 ))}
             </div>

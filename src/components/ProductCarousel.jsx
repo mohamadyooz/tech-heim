@@ -43,16 +43,7 @@ const ProductCarousel = () => {
 
     const visibleProducts = getVisibleProducts();
 
-    // تعریف مجدد توابع nextCard و prevCard برای دکمه‌ها
-    const nextCard = () => {
-        if (!products) return;
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % products.length);
-    };
-
-    const prevCard = () => {
-        if (!products) return;
-        setCurrentIndex((prevIndex) => (prevIndex - 1 + products.length) % products.length);
-    };
+  
 
     // Event Handlerهای Mouse برای Drag
     const handleMouseDown = (e) => {
@@ -93,17 +84,9 @@ const ProductCarousel = () => {
     return (
         <div className="product-carousel-container">
             <div className="carousel-title">
-                <h3 >Products On Sale</h3>
-                <p style={{ fontSize: '20px' }}>Shop Now!</p>
+                <p>Products On Sale</p>
+                <p className='pragraph-carousel-title'>Shop Now !</p>
                 <button className="shop-now-button" disabled={loading}>view all &gt;</button> {/* دکمه Shop Now! */}
-
-                {/* دکمه‌های پیمایش */}
-                <button className="carousel-button next-button" onClick={nextCard} disabled={loading}>
-                    <img src="src\assets\img\home\icon\circle-right.svg" alt="Next" className='circle-arrow' />
-                </button>
-                <button className="carousel-button prev-button" onClick={prevCard} disabled={loading}>
-                    <img src="src\assets\img\home\icon\circle-left.svg" alt="Previous" className='circle-arrow' />
-                </button>
             </div>
             <div
                 className="carousel-cards-container"
@@ -131,14 +114,15 @@ const ProductCard = ({ product}) => {
     const [truncatedName, setTruncatedName] = useState(product.name);    // اضافه شدن state و ref برای مدیریت برش متن
     const nameRef = useRef(null);
     const estimatedCharsPerTwoLines = 30;    // تعداد تقریبی کاراکترها که در دو خط جای می گیرند (این عدد باید تنظیم شود)
-
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+    
     useEffect(() => {
         const truncateText = () => {
             const nameElement = nameRef.current;
             if (!nameElement || !product.name) return;
 
             // منطق ساده برش بر اساس تعداد کاراکتر
-            if (product.name.length > estimatedCharsPerTwoLines) {
+            if (isMobile>768,product.name.length > estimatedCharsPerTwoLines) {
                 const shortened = product.name.substring(0, estimatedCharsPerTwoLines) + '...';
                 setTruncatedName(shortened);
             }
@@ -161,8 +145,9 @@ const ProductCard = ({ product}) => {
     };
 
     return (
+        <>
         <div
-            className={`product-card ${isHovering ? 'active' : ''}`}
+            className={`product-card desktop-only ${isHovering ? 'active' : ''}`}
             style={{ width: '200px',  }}
             // تغییرات از کد اولیه شما: اضافه شدن هندلرهای onMouseEnter و onMouseLeave
             onMouseEnter={handleMouseEnter}
@@ -177,6 +162,23 @@ const ProductCard = ({ product}) => {
             <p className="product-price" style={{float:'right'}}>{product.price}</p>
             <p className="product-price" style={{float:'left'}}><del>{product.saleprice}</del></p>
         </div>
+        <div
+            className={`product-card mobile-only ${isHovering ? 'active' : ''}`}
+            style={{ width: '100px',  }}
+            // تغییرات از کد اولیه شما: اضافه شدن هندلرهای onMouseEnter و onMouseLeave
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+        >
+             {product.discount && <span className="discount-badge" >{product.discount}</span>}
+            <img src={product.image} alt={product.name} className="product-image"
+                style={{ width: '100%',zIndex:'1' , }}/>
+            <h3 className="product-name" ref={nameRef}>    {/* استفاده از رفرنس و نمایش نام بریده شده */}
+                {truncatedName}
+            </h3>
+            <p className="product-price" style={{float:'right'}}>{product.price}</p>
+            <p className="product-price" style={{float:'left'}}><del>{product.saleprice}</del></p>
+        </div>
+        </>  
     );
 };
 

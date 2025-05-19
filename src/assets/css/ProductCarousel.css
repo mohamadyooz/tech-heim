@@ -1,111 +1,107 @@
 /* استایل کلی کانتینر کاروسل */
 .product-carousel-container {
-  background-image: url(src/assets/img/home/Salessection.svg); /* تصویر پس‌زمینه جدید */
-  background-size: cover; /* پوشش کامل پس‌زمینه */
-  border-radius: 8px; /* گوشه‌های گرد */
-  padding: 30px; /* فاصله داخلی بیشتر */
-  color: white; /* رنگ متن سفید */
-  text-align: center; /* ترازبندی متن در مرکز */
-  overflow-x: scroll; /* مخفی کردن اسکرول افقی اضافی */
-  position: relative; /* موقعیت‌دهی نسبی برای دکمه‌های پیمایش */
-/*  cursor: grab;*/
+  background-image: url(src/assets/img/home/Salessection.svg);
+  background-size: cover;
+  border-radius: 8px;
+  padding: 30px;
+  color: white;
+  text-align: center;
+  overflow-x: scroll;
+  position: relative;
 }
+
 .carousel-title {
-  width: 18%; /* عرض عنوان کمتر */
-  margin-top: 50px; /* فاصله بالا از عنوان */
-  float: left; /* شناور شدن به چپ */
+  width: 18%;
+  margin-top: 50px;
+  float: left;
+  font-size: 1.7rem;
+}
+.pragraph-carousel-title{
+  font-size: 1.2rem;
+  font-weight: 200;
+  margin-top: -5%;
 }
 
 /* استایل کانتینر کارت‌ها */
 .carousel-cards-container {
-  width: 75%; /* عرض کانتینر کارت‌ها بیشتر */
-  left: 100px; /* موقعیت دهی از چپ */
-  display: flex; /* استفاده از فلکس باکس */
-  overflow-x: visible ; /* مخفی کردن کارت‌های خارج از محدوده */
-  gap: 0px; /* حذف فاصله بین کارت‌ها */
-  position: relative; /* موقعیت‌دهی نسبی برای دکمه‌های پیمایش داخل کانتینر */
-  justify-content:left; /* مرکز قرار دادن کارت‌ها */
+  width: 75%;
+  left: 70px;
+  display: flex;
+  overflow-x: visible;
+  gap: 0px;
+  position: relative;
+  justify-content: left;
 }
+
 
 /* استایل دکمه‌های کاروسل */
 .carousel-button {
-  background: none; /* حذف پس‌زمینه دکمه */
-  border: none; /* حذف حاشیه دکمه */
-  padding: 0px; /* حذف فاصله داخلی دکمه */
-  margin-inline: 5px; /* فاصله جانبی دکمه‌ها */
-  position: relative; /* موقعیت‌دهی نسبی برای دکمه‌ها */
-  float: left; /* شناور شدن به چپ */
+  background: none;
+  border: none;
+  padding: 0px;
+  margin-inline: 5px;
+  position: relative;
+  float: left;
 }
 
 .circle-arrow {
-  transition: all 0.3s ease; /* انیمیشن تغییر اندازه */
-  width: 40px; /* عرض اولیه فلش */
+  transition: all 0.3s ease;
+  width: 40px;
 }
 
 .circle-arrow:hover {
-  width: 50px; /* افزایش عرض فلش در حالت hover */
-  height: 50px; /* افزایش ارتفاع فلش در حالت hover */
-}
+  width: 50px;
+  height: 50px;
 
-.prev-button {
-  margin-left: 150px; /* فاصله راست دکمه قبلی */
-  /* موقعیت دکمه بعدی در کامنت (احتمالا اشتباه تایپی و منظور دکمه قبلی بوده) */
 }
-
-.next-button {
-  margin-left: 200px; /* موقعیت دهی دکمه بعدی از چپ */
-  top: 37px; /* موقعیت دهی دکمه بعدی از بالا */
-}
-
 /* استایل کارت محصول */
 .product-card {
-  background-color: white; /* پس‌زمینه سفید کارت */
-  color: black; /* رنگ متن مشکی کارت */
-  border-radius: 5px; /* گوشه‌های گرد کارت */
-  padding: 0px; /* حذف فاصله داخلی کارت */
-  text-align: left; /* ترازبندی متن در مرکز کارت */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* سایه ملایم کارت */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* انیمیشن تغییر اندازه و سایه کارت */
-  flex: 0 0 auto; /* جلوگیری از کشیده شدن کارت‌ها */
-  overflow:auto;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  padding: 0px;
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 0 0 auto;
+  overflow: auto;
 }
 
 .product-card.active {
-  border: 2px solid #007bff; /* حاشیه آبی برای کارت فعال */
-  transform: scale(1.05); /* بزرگتر کردن کارت فعال */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* سایه بیشتر برای کارت فعال */
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* استایل تصویر محصول */
 .product-image {
-  width: 100%; /* عرض 100 درصد */
-  height: 20%; /* ارتفاع 20 درصد */
-  border-radius: 8px; /* گوشه‌های گرد تصویر */
+  width: 100%;
+  height: 20%;
+  border-radius: 8px;
 }
 
 /* استایل نام محصول */
 .product-name {
-  font-size: 16px; /* اندازه فونت نام محصول */
-  margin-bottom: 5px; /* فاصله پایین نام محصول */
+  font-size: 16px;
+  margin-bottom: 5px;
   height: 40px;
 }
 
 /* استایل قیمت محصول */
 .product-price {
-  font-size: 16px; /* اندازه فونت قیمت محصول */
-  color: #666; /* رنگ خاکستری قیمت محصول */
-  margin-bottom: 5px; /* فاصله پایین قیمت محصول */
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 5px;
 }
 
 /* استایل نشان تخفیف */
 .discount-badge {
-  background-color: #f8394c42; /* رنگ قرمز نشان تخفیف */
-  color: rgb(255, 4, 4); /* رنگ متن سفید نشان تخفیف */
-  padding: 1px 8px; /* فاصله داخلی نشان تخفیف */
-  border-radius: 5px; /* گوشه‌های گرد نشان تخفیف */
-  font-size: 14px; /* اندازه فونت نشان تخفیف */
+  background-color: #f8394c42;
+  color: rgb(255, 4, 4);
+  padding: 1px 8px;
+  border-radius: 5px;
+  font-size: 14px;
   z-index: 2;
-  position:absolute;
+  position: absolute;
   margin-left: -13px;
 }
 
@@ -113,17 +109,46 @@
 .shop-now-button {
   width: 50%;
   height: 45px;
-  background-color: #007bff; /* آبی روشن پس‌زمینه دکمه */
-  color: white; /* رنگ متن سفید دکمه */
-  border: none; /* حذف حاشیه دکمه */
+  color: white;
+  border: none;
   margin-top: 40px;
-  padding: 10px 20px; /* فاصله داخلی دکمه */
-  border-radius: 5px; /* گوشه‌های گرد دکمه */
-  cursor: pointer; /* نشانگر موس به شکل دست */
-  transition: background-color 0.3s ease; /* انیمیشن تغییر رنگ پس‌زمینه */
-  position: relative; /* موقعیت‌دهی نسبی */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 1.2rem;
+
 }
 
 .shop-now-button:hover {
-  background-color: #0056b3; /* آبی تیره تر در حالت hover */
+  transform: scale(1.05);
+}
+
+@media (max-width:426px) {
+  .shop-now-button {
+    width: 150px;
+  }
+
+  .carousel-title{
+    width: auto;
+    margin-top: 0px;
+    font-size: 1.1rem;
+  }
+  .pragraph-carousel-title{
+    font-size: 0.9rem;
+  
+  }
+  .carousel-cards-container {
+    width: auto;
+    left: 0px;
+  }
+
+  .product-carousel-container {
+    padding: 20px;
+    padding-left: 0px;
+  }
+  .shop-now-button {
+    font-size: 1rem;
+  
+  }
 }

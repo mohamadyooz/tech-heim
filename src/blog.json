@@ -3,7 +3,7 @@
         {
             "id": "article-1",
             "title": "8 Things You Probably Didn't Know About Headphones",
-            "imageUrl": "/images/article-headphones.jpg",
+            "imageUrl": "src/assets/img/home/Salessection.svg",
             "date": "March 28, 2023",
             "readTime": "3",
             "excerpt": "Owning a headphone could mean a different thing for different people. For some, it act as a fashion statement. It’s easy to spot these people, the headphone are almo..."
@@ -11,7 +11,7 @@
         {
             "id": "article-2",
             "title": "Meta Platforms plans to release free tools to challenge OpenAI and Google",
-            "imageUrl": "/images/article-meta.jpg",
+            "imageUrl": "src/assets/img/home/Salessection.svg",
             "date": "August 8, 2023",
             "readTime": "3",
             "excerpt": "The parent company of Facebook, Meta Platforms, is introducing software to help developers build artificial intelligence-powered tools, aiming to capitalize on..."
@@ -19,7 +19,7 @@
         {
             "id": "article-3",
             "title": "Analyzing the August 17th Bitcoin Price Drop",
-            "imageUrl": "/images/article-bitcoin.jpg",
+            "imageUrl": "src/assets/img/home/Salessection.svg",
             "date": "August 17, 2023",
             "readTime": "5",
             "excerpt": "On August 17th at 9:30PM UTC, Bitcoin’s price dropped more than 8% in a 10-minute window, to a two-month low of under $26k. This pulled..."
@@ -27,7 +27,7 @@
         {
             "id": "article-4",
             "title": "How to Choose the Best Camera for Your Needs",
-            "imageUrl": "/images/article-camera.jpg",
+            "imageUrl": "src/assets/img/home/Salessection.svg",
             "date": "September 1, 2023",
             "readTime": "7",
             "excerpt": "Selecting the right camera can be daunting with so many options available. Whether you're a beginner or a professional, here's a guide to help you..."
@@ -35,7 +35,7 @@
         {
             "id": "article-5",
             "title": "Latest Trends in Smartwatch Technology",
-            "imageUrl": "/images/article-smartwatch.jpg",
+            "imageUrl": "src/assets/img/home/Salessection.svg",
             "date": "September 15, 2023",
             "readTime": "4",
             "excerpt": "Smartwatches are evolving rapidly, offering more features than ever before. From fitness tracking to contactless payments, here's what's new..."

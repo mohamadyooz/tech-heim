@@ -1,34 +1,33 @@
-// CategoryCard.js
 import React from 'react';
 
 function CategoryCard({ title, imageUrl }) {
   return (
     <article
-      className="col-2 "
+      className="col-3 col-lg-2"
       style={{
-        padding: '5px',
+        padding:'0',
         margin: '0',
-        fontSize: '1rem',
         textAlign: 'center',
       }}
     >
       <div
-        className="card "
+        className="card py-4"
         style={{
-          width: '95%',
-          height: '190px',
+          width: '110px',
           border: 'none',
+          padding:'0'
         }}
       >
-        <div className="card-body">
+        <div className="" >
           <a href="#" className="">
             <img
               className="card-img-top"
               src={imageUrl}
-              alt="Card image"
+              alt={`تصویر ${title}`}
               style={{
-                height: '140px',
                 width: '100%',
+                objectFit: 'cover',
+                height:'80px'
               }}
             />
           </a>

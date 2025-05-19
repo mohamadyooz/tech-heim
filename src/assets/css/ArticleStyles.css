@@ -1,139 +1,188 @@
-/* ArticleStyles.css */
-
 .article-list-container {
-    padding: 20px;
-    max-width: 1200px; /* یا عرض دلخواه */
-    margin: 0 auto; /* مرکز قرار دادن لیست */
-}
-
-.article-list-container h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #333;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .articles-grid {
-    display: grid; /* استفاده از گرید برای چیدمان دو ستونی */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* ستون‌های واکنش‌گرا */
-    gap: 20px; /* فاصله بین کارت‌ها */
-    /* یا می توانید از فلکس باکس استفاده کنید: */
-    /* display: flex; */
-    /* flex-wrap: wrap; */
-    /* gap: 20px; */
-    /* justify-content: center; */ /* برای مرکز قرار دادن کارت ها در فلکس */
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+}
+
+.article-card-pos-0 {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+}
+
+.article-card-pos-1 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.article-card-pos-2 {
+    grid-column: 2;
+    grid-row: 2;
 }
 
 .article-card {
-    background-color: #fff;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    overflow: hidden; /* مطمئن شوید محتوا از گوشه‌های گرد بیرون نزند */
-    display: flex; /* استفاده از فلکس برای چیدمان تصویر و محتوا کنار هم */
-    flex-direction: column; /* در موبایل تصویر بالا، محتوا پایین */
-    /* در صفحه نمایش بزرگتر می توانید جهت را تغییر دهید */
-    /* @media (min-width: 768px) { */
-    /* flex-direction: row; */
-    /* } */
-}
-
-/* اگر از لینک برای کل کارت استفاده می کنید */
-/* .article-link-wrapper {
-    text-decoration: none;
-    color: inherit;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100%;
-} */
+    background-color: #fff;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.article-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.article-card-pos-1,
+.article-card-pos-2 {
+    height: 200px;
+    flex-direction: row;
+    align-items: center;
+}
 
 .article-image-container {
-    /* کنترل اندازه و نسبت ابعاد تصویر */
-    flex-basis: 150px; /* اندازه اولیه در جهت اصلی فلکس */
-    flex-shrink: 0; /* از کوچک شدن تصویر جلوگیری کن */
-    /* @media (min-width: 768px) { */
-    /* flex-basis: 200px; */ /* اندازه بزرگتر در صفحه نمایش بزرگتر */
-    /* } */
+    width: 100%;
+    background-color: #000000;
 }
 
 .article-image {
     width: 100%;
-    height: 100%; /* یا ارتفاع مشخص */
-    object-fit: cover; /* برش تصویر برای پر کردن فضا با حفظ نسبت ابعاد */
-    display: block; /* حذف فضای اضافی زیر تصویر */
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+
+.article-card-pos-1 .article-image-container,
+.article-card-pos-2 .article-image-container {
+     width: 40%;
+     height: 100%;
+}
+
+.article-card-pos-1 .article-image,
+.article-card-pos-2 .article-image {
+    height: 40%;
 }
 
 .article-content {
-    padding: 15px;
+    padding: 10px 15px;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* اجازه بده محتوا فضای باقی مانده را پر کند */
-    position: relative; /* برای موقعیت دهی مطلق دکمه برگزیده */
+    justify-content: space-between;
+}
+
+.article-card-pos-1 .article-content,
+.article-card-pos-2 .article-content {
+    width: 60%;
+    padding: 10px;
 }
 
 .article-title {
-    font-size: 1.2em;
-    margin: 0 0 10px 0;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 5px;
     color: #333;
-    line-height: 1.4; /* ارتفاع خط برای برش متن */
-    /* --- استایل های برش متن (Webkit) --- */
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    /* ----------------------------------- */
 }
 
 .article-excerpt {
     font-size: 0.9em;
     color: #555;
-    margin-bottom: 15px;
-    /* اگر می خواهید خلاصه را هم برش دهید، استایل های بالا را اینجا هم اعمال کنید */
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .article-metadata {
     font-size: 0.8em;
     color: #777;
-    margin-top: auto; /* هل دادن متادیتا به پایین کارت */
+    margin-top: auto;
     display: flex;
-    justify-content: space-between; /* توزیع فضا بین تاریخ و زمان مطالعه */
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.article-metadata span {
+    display: flex;
     align-items: center;
 }
 
-.article-date,
-.article-read-time {
-    display: flex;
-    align-items: center;
+.article-metadata span span {
+    margin-right: 5px;
+    font-size: 1.1em;
 }
-
-.article-date span,
-.article-read-time span {
-    margin-right: 5px; /* فاصله بین آیکون و متن */
-}
-
 
 .feature-button {
-    position: absolute; /* موقعیت دهی مطلق */
-    top: 10px; /* فاصله از بالا */
-    right: 10px; /* فاصله از راست */
     background: none;
     border: none;
-    font-size: 1.5em; /* اندازه آیکون */
     cursor: pointer;
-    padding: 0; /* حذف پدینگ پیش فرض دکمه */
-    color: #ccc; /* رنگ پیش فرض آیکون */
+    font-size: 1.5em;
+    color: #ccc;
+    transition: color 0.2s ease-in-out;
+    align-self: flex-end;
+    margin-top: auto;
+    padding: 5px;
 }
 
 .feature-button.featured {
-    color: gold; /* رنگ آیکون وقتی برگزیده است */
+    color: gold;
 }
 
-/* استایل ها برای نمایش بهتر در صفحه نمایش کوچک */
-@media (max-width: 767px) {
-    .article-card {
-        flex-direction: column; /* در موبایل تصویر بالا، محتوا پایین */
+.feature-button:hover {
+    color: #ffc107;
+}
+
+@media (max-width: 768px) {
+    .articles-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        grid-template-columns: auto;
     }
-    .article-image-container {
-        flex-basis: auto; /* اندازه اولیه خودکار */
-        height: 180px; /* ارتفاع مشخص برای تصویر در موبایل */
+
+    .article-card-pos-0,
+    .article-card-pos-1,
+    .article-card-pos-2 {
+        height: auto;
+        grid-column: 1;
+        grid-row: auto !important;
+    }
+
+    .article-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .article-image-container,
+    .article-card-pos-1 .article-image-container,
+    .article-card-pos-2 .article-image-container {
+        width: 100%;
+        height: auto;
+    }
+
+     .article-content,
+     .article-card-pos-1 .article-content,
+     .article-card-pos-2 .article-content {
+        width: 100%;
+        height: auto;
+    }
+
+    .article-image,
+    .article-card-pos-1 .article-image,
+     .article-card-pos-2 .article-image {
+        height: auto;
+        width: 100%;
+    }
+
+    .feature-button {
+        align-self: flex-end;
     }
 }

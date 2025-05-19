@@ -75,6 +75,7 @@
 /*footer*/
 
 .modern-footer {
+    border-radius: 8px;
     background: rgb(2, 23, 54);
     border-top: 1px solid rgba(0, 0, 0, 0.05);
     position: relative;
